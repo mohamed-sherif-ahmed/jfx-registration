@@ -96,7 +96,7 @@ public class Controller {
             if (pss.length == 0)
                 throw new RuntimeException("No printer services available.");
 
-            PrintService ps = pss[1];
+            PrintService ps = pss[0];
             System.out.println("Printing to " + ps);
             DocPrintJob job = ps.createPrintJob();
             FileInputStream fin = new FileInputStream(qrCodeFile);
