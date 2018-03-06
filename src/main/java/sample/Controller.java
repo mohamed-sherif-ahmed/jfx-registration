@@ -131,7 +131,7 @@ public class Controller {
         try{
             in = new BufferedReader(new FileReader("saved_file.sfr"));
             while ((s = in.readLine()) != null){
-                StringEntity entity = new StringEntity(payload,
+                StringEntity entity = new StringEntity(s,
                         ContentType.APPLICATION_FORM_URLENCODED);
 
                 HttpClient httpClient = HttpClientBuilder.create().build();
