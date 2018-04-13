@@ -4,47 +4,103 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <center>
-      <GridPane prefHeight="200.0" prefWidth="448.0" BorderPane.alignment="CENTER">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="85.280029296875" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="323.719970703125" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="txtName" prefHeight="27.0" prefWidth="563.0" GridPane.columnIndex="1" />
-            <Label text="Name" />
-            <Label text="Email" GridPane.rowIndex="1" />
-            <TextField fx:id="txtEmail" prefHeight="27.0" prefWidth="564.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Phone" GridPane.rowIndex="2" />
-            <TextField fx:id="txtPhone" prefHeight="27.0" prefWidth="559.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="378.0" prefWidth="580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="85.280029296875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="323.719970703125" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#sendRequest" onTouchPressed="#sendRequest" text="Submit">
-                     <FlowPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </FlowPane.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#syncOfflineFiles" onKeyPressed="#syncOfflineFiles" text="Sync">
-                     <FlowPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </FlowPane.margin>
-                  </Button>
+                  <TextField fx:id="txtName" prefHeight="27.0" prefWidth="563.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Name">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" prefHeight="27.0" prefWidth="564.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Phone" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPhone" prefHeight="27.0" prefWidth="559.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#sendRequest" onTouchPressed="#sendRequest" text="Submit">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#syncOfflineFiles" onKeyPressed="#syncOfflineFiles" text="Sync">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </FlowPane>
                </children>
-            </FlowPane>
+            </GridPane>
          </children>
-      </GridPane>
+      </AnchorPane>
    </center>
+   <top>
+      <ImageView fitHeight="169.0" fitWidth="200.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@PB_logo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="311.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
 </BorderPane>
